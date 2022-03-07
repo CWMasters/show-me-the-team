@@ -20,3 +20,4 @@ const writeFile = fileContent => {
 
 // pass in generatePage
 module.exports = {writeFile};
+

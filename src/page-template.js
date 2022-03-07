@@ -1,9 +1,10 @@
+
 const generateManager = function(manager) {
     return`
-    <div>
+    <div class="card">
       <div>
         <h2>${manager.name}</h2>
-        <h3>Manager</h3>
+        <h3>${manager.role}</h3>
       </div>
       <div>
         <p>ID:${manager.id}</p>
@@ -16,10 +17,10 @@ const generateManager = function(manager) {
 
 const generateEngineer = function(engineer) {
     return`
-    <div>
+    <div class="card">
       <div>
         <h2>${engineer.name}</h2>
-        <h3></h3>
+        <h3>${engineer.role}</h3>
       </div>
       <div>
         <p>ID:${engineer.id}</p>
@@ -32,10 +33,10 @@ const generateEngineer = function(engineer) {
 
 const generateIntern = function(intern) {
     return`
-    <div>
+    <div class="card">
       <div>
         <h2>${intern.name}</h2>
-        <h3></h3>
+        <h3>${intern.role}</h3>
       </div>
       <div>
         <p>ID:${intern.id}</p>
@@ -46,7 +47,13 @@ const generateIntern = function(intern) {
     `;
 };
 
-const pageTemplate = function (empCards) {
+
+
+
+
+
+
+const genPage = function (empCards) {
   return`
   
   <!DOCTYPE html>
@@ -55,6 +62,7 @@ const pageTemplate = function (empCards) {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <title>Show Me The Team</title>
 </head>
 <body>
