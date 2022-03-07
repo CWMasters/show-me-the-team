@@ -1,6 +1,7 @@
 const fs = require('fs');
 const inquirer = require('inquirer');
 const generateHTML = require('./utils/generateHTML.js');
+// const pageTemplate = require('./src/page-template.js');
 const Manager = require('./lib/Manager');
 const Engineer = require('./lib/Engineer');
 const Intern = require('./lib/Intern');
@@ -180,12 +181,12 @@ const inputEmployee = () => {
   })
 };
 
+
 // generate html
 inputManager()
     .then(inputEmployee)
-    // .then(console.log(employeeArray))
     // .then(employeeArray => {
-    //     return generateHTML(employeeArray);
+    //     return pageTemplate(employeeArray);
     // })
     .then(pageHTML => {
         return generateHTML.writeFile(pageHTML);
